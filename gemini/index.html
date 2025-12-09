@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JasmineDaxi Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        
+        <section class="page">
+            <div class="content-wrapper">
+                <h1>JasmineDaxi</h1>
+                <ul>
+                    <li>Born in 1190/9/10</li>
+                    <li>Currently studying Imagination Management in USE</li>
+                    <li>Love travel, photography, and gaming.</li>
+                </ul>
+                <div class="social-links">
+                   <a href="https://github.com/JasmineDaxi" target="_blank">
+                       <i class="fa-brands fa-github"></i> Github
+                   </a> 
+                   <a href="#" onclick="copyEmail(event, '411435053@gms.ndhu.edu.tw')">
+                       <i class="fa-solid fa-envelope"></i> Gmail
+                   </a>
+                   <a href="https://steamcommunity.com/profiles/76561199101721868/" target="_blank">
+                       <i class="fa-brands fa-steam"></i> Steam
+                   </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="page">
+            <div class="embed-container">
+                <iframe class="embed-iframe" 
+                        src="https://steamdb.info/calculator/76561199101721868/?cc=tw"
+                        title="SteamDB Calculator">
+                </iframe>
+            </div>
+        </section>
+
+        <section class="page">
+             <div class="embed-container">
+                <iframe class="embed-iframe" 
+                        src="https://stickmanhookgame.org/"
+                        title="Stickman Hook Game">
+                </iframe>
+            </div>
+        </section>
+
+        <section class="page">
+            <div class="photography-grid-wrapper">
+                <h2 class="portfolio-title">Photography Portfolio</h2>
+                
+                <div class="squared-grid">
+                    <div class="grid-item item-1"><img src="DSC_0449.jpg" alt="Photo 1"></div>
+                    <div class="grid-item item-2"><img src="DSC_0450.jpg" alt="Photo 2"></div>
+                    <div class="grid-item item-3"><img src="DSC_0456.jpg" alt="Photo 3"></div>
+                    <div class="grid-item item-4"><img src="DSC_0497.jpg" alt="Photo 4"></div>
+                    <div class="grid-item item-5"><img src="DSC_0678.jpg" alt="Photo 5"></div>
+                    <div class="grid-item item-6"><img src="DSC_0688.jpg" alt="Photo 6"></div>
+                    <div class="grid-item item-7"><img src="DSC_0760.jpg" alt="Photo 7"></div>
+                    <div class="grid-item item-8"><img src="DSC_0929.jpg" alt="Photo 8"></div>
+                    <div class="grid-item item-9"><img src="DSC_0968.jpg" alt="Photo 9"></div>
+                </div>
+
+                <p class="grid-note">
+                    請將 placeholder-N.jpg 替換為你的真實圖片連結。
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+    <div id="toast">Copied!</div>
+
+    <script>
+        function copyEmail(event, email) {
+            event.preventDefault(); 
+            navigator.clipboard.writeText(email).then(() => {
+                showToast(); 
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+
+        function showToast() {
+            var toast = document.getElementById("toast");
+            toast.className = "show"; 
+            setTimeout(function(){ 
+                toast.className = toast.className.replace("show", ""); 
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
